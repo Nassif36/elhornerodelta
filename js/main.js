@@ -130,7 +130,7 @@
       address: {
         "@type": "PostalAddress",
         streetAddress: "Arroyo Abra Vieja",
-        addressLocality: "Tres Bocas, Tigre Delta",
+        addressLocality: "Tigre Delta, Tres Bocas, Arroyo Abra Vieja",
         addressRegion: "Buenos Aires",
         addressCountry: "AR"
       },

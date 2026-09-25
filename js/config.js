@@ -1,9 +1,9 @@
 const SITE_CONFIG = Object.freeze({
   siteUrl: "",
   restaurantName: "El Hornero",
-  location: "Arroyo Abra Vieja, Tres Bocas, Tigre Delta, Buenos Aires",
+  location: "Tigre Delta, Tres Bocas, Arroyo Abra Vieja, Buenos Aires",
   whatsappNumber: "5491168936322",
-  instagramUrl: "",
+  instagramUrl: "https://www.instagram.com/elhornero.resto/",
   googleMapsUrl: "https://www.google.com/maps/place/el+hornero+delta/data=!4m2!3m1!1s0x95bca71bd646fa97:0x4a98c4b3dfbd502d?sa=X&ved=1t:242&ictx=111",
   travelMaps: Object.freeze({
     riverStation: "https://www.google.com/maps/place/Boleter%C3%ADa+estaci%C3%B3n+fluvial+%7C+Interisle%C3%B1a/@-34.4215459,-58.579745,19z/data=!4m10!1m2!2m1!1sestacion+fluvial+tigre!3m6!1s0x95bca5bda93377e9:0x3350b0b8dc2d96e3!8m2!3d-34.4215669!4d-58.5797209!15sChZlc3RhY2lvbiBmbHV2aWFsIHRpZ3JlWhgiFmVzdGFjaW9uIGZsdXZpYWwgdGlncmWSAQ10aWNrZXRfb2ZmaWNlmgEjQ2haRFNVaE5NRzluUzBWSlEwRm5UVVJKYVRSSVMwcG5FQUXgAQD6AQQIABAv!16s%2Fg%2F11bx453zw0?entry=ttu&g_ep=EgoyMDI2MDkyMS4wIKXMDSoASAFQAw%3D%3D",
