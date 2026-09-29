@@ -11,6 +11,20 @@
   const lightboxImage = lightbox.querySelector("figure img");
   const lightboxCaption = lightbox.querySelector(".lightbox-caption");
   const lightboxCount = lightbox.querySelector(".lightbox-count");
+  const galleryImageSources = [
+    "images/el-hornero-delta-mesa-exterior.png",
+    "images/el-hornero-delta-galeria-01.jpeg",
+    "images/el-hornero-delta-galeria-02.jpeg",
+    "images/el-hornero-delta-glicinas-luz.jpeg",
+    "images/el-hornero-delta-galeria-03.jpeg",
+    "images/el-hornero-delta-galeria-04.jpeg",
+    "images/el-hornero-delta-galeria-05.jpeg",
+    "images/el-hornero-delta-galeria-06.jpeg",
+    "images/el-hornero-delta-galeria-07.jpeg",
+    "images/el-hornero-delta-espacio-exterior.jpeg",
+    "images/el-hornero-delta-galeria-08.jpeg",
+    "images/el-hornero-delta-galeria-09.jpeg"
+  ];
   let language = getInitialLanguage();
   let currentImage = 0;
   let returnFocus = null;
@@ -70,6 +84,20 @@
     header.classList.toggle("scrolled", window.scrollY > 40);
   }
 
+  function randomizeGallery() {
+    const shuffledSources = [...galleryImageSources];
+    for (let index = shuffledSources.length - 1; index > 0; index -= 1) {
+      const randomIndex = Math.floor(Math.random() * (index + 1));
+      [shuffledSources[index], shuffledSources[randomIndex]] = [shuffledSources[randomIndex], shuffledSources[index]];
+    }
+    galleryButtons.forEach((button, index) => {
+      const image = button.querySelector("img");
+      image.src = shuffledSources[index];
+      image.dataset.i18nAlt = "altGalleryPhoto";
+      image.alt = t("altGalleryPhoto");
+    });
+  }
+
   function updateLightbox() {
     const source = galleryButtons[currentImage].querySelector("img");
     lightboxImage.src = source.src;
@@ -112,7 +140,9 @@
     }
     const whatsapp = document.querySelector(".whatsapp-button");
     if (SITE_CONFIG.whatsappNumber) {
-      whatsapp.href = `https://wa.me/${SITE_CONFIG.whatsappNumber.replace(/\D/g, "")}`;
+      const whatsappUrl = `https://wa.me/${SITE_CONFIG.whatsappNumber.replace(/\D/g, "")}`;
+      whatsapp.href = whatsappUrl;
+      document.querySelectorAll("[data-whatsapp-link]").forEach((link) => { link.href = whatsappUrl; });
       whatsapp.hidden = false;
     }
     const canonical = document.querySelector("#canonical-link");
@@ -150,6 +180,7 @@
   window.addEventListener("scroll", updateHeader, { passive: true });
   window.addEventListener("resize", () => { if (window.innerWidth > 980) closeNavigation(); });
 
+  randomizeGallery();
   galleryButtons.forEach((button, index) => button.addEventListener("click", () => openLightbox(index)));
   lightbox.querySelector(".lightbox-close").addEventListener("click", closeLightbox);
   lightbox.querySelector(".prev").addEventListener("click", () => moveLightbox(-1));
