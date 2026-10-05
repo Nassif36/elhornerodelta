@@ -17,8 +17,8 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/config.js" defer></script>
-  <script src="js/translations.js?v=2" defer></script>
-  <script src="js/main.js?v=4" defer></script>
+  <script src="js/translations.js?v=4" defer></script>
+  <script src="js/main.js?v=5" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n="skip">Saltar al contenido</a>
@@ -52,7 +52,7 @@
       <div class="hero-content">
         <p class="eyebrow" data-i18n="heroKicker">Tigre Delta · Tres Bocas · Arroyo Abra Vieja</p>
         <h1 id="hero-title">EL<br>HORNERO</h1>
-        <p class="hero-line" data-i18n="heroLine">Una mesa entre el río y el verde.</p>
+        <p class="hero-line"><span data-i18n="heroLine">Desde 1972 haciendo historia en el Delta argentino</span> <img class="argentina-flag" src="assets/icons/argentina.svg" alt="Bandera argentina" data-i18n-alt="altArgentinaFlag" width="36" height="24"></p>
         <div class="hero-actions">
           <a class="button button-light" href="menu.html"><span data-i18n="viewMenu">Ver menú</span><span aria-hidden="true">↗</span></a>
           <a class="text-link light" href="#llegar"><span data-i18n="getThere">Cómo llegar</span><span aria-hidden="true">↓</span></a>
@@ -65,11 +65,10 @@
     <section class="experience section-pad" id="experiencia" aria-labelledby="experience-title">
       <div class="experience-visual reveal">
         <img src="images/el-hornero-delta-espacio-exterior.jpeg" alt="Espacio exterior de El Hornero junto al río en el Delta" data-i18n-alt="altTable" width="900" height="1150" loading="lazy" decoding="async">
-        <span class="photo-label" data-i18n="expNote">Un lugar para quedarse un rato</span>
       </div>
       <div class="experience-copy reveal">
         <p class="eyebrow green" data-i18n="expEyebrow">01 — Experiencia</p>
-        <h2 id="experience-title" data-i18n="expTitle">El Delta, servido a su propio ritmo.</h2>
+        <h2 id="experience-title" data-i18n="expTitle">Almorza en el corazón del delta.</h2>
         <p data-i18n="expBody">Comida, madera, vegetación y aire de río se encuentran en Tres Bocas. El Hornero propone una pausa simple dentro del paisaje del Delta.</p>
         <div class="botanical-mark" aria-hidden="true"><span></span><span></span><span></span></div>
       </div>
@@ -78,7 +77,7 @@
 
     <section class="image-break reveal" aria-label="Paisaje del Delta" data-i18n-aria="deltaLandscape">
       <img src="images/el-hornero-delta-glicinas-luz.jpeg" alt="Luz entre glicinas, madera y vegetación del Delta" data-i18n-alt="altLight" width="1800" height="950" loading="lazy" decoding="async">
-      <p data-i18n="breakPhrase">Entre glicinas, madera y luz del Delta.</p>
+      <p data-i18n="breakPhrase">Amarras y rampa exclusivas para clientes.</p>
     </section>
 
     <section class="gallery-section section-pad" id="galeria" aria-labelledby="gallery-title">
@@ -88,23 +87,21 @@
         <p data-i18n="galleryIntro">Una mirada a los sabores, el paisaje y los pequeños detalles que rodean la mesa.</p>
       </header>
       <div class="journal-grid">
-        <button class="gallery-item tall reveal" type="button" data-index="0"><img src="images/el-hornero-delta-galeria-01.jpeg" alt="Fotografía de El Hornero, restaurante en el Delta de Tigre" data-i18n-alt="altGalleryPhoto" width="900" height="1150" loading="lazy" decoding="async"><span data-i18n="catPlace">El lugar</span></button>
+        <button class="gallery-item tall reveal" type="button" data-index="0"><img src="images/el-hornero-delta-galeria-06.jpeg" alt="Fotografía de El Hornero, restaurante en el Delta de Tigre" data-i18n-alt="altGalleryPhoto" width="900" height="1150" loading="lazy" decoding="async"><span data-i18n="catPlace">El lugar</span></button>
         <button class="gallery-item wide reveal" type="button" data-index="1"><img src="images/el-hornero-delta-galeria-03.jpeg" alt="Fotografía de El Hornero, restaurante en el Delta de Tigre" data-i18n-alt="altGalleryPhoto" width="1200" height="760" loading="lazy" decoding="async"></button>
         <button class="gallery-item small reveal" type="button" data-index="2"><img src="images/el-hornero-delta-galeria-04.jpeg" alt="Fotografía de El Hornero, restaurante en el Delta de Tigre" data-i18n-alt="altGalleryPhoto" width="800" height="800" loading="lazy" decoding="async"></button>
         <button class="gallery-item landscape reveal" type="button" data-index="3"><img src="images/el-hornero-delta-galeria-05.jpeg" alt="Fotografía de El Hornero, restaurante en el Delta de Tigre" data-i18n-alt="altGalleryPhoto" width="1100" height="750" loading="lazy" decoding="async"></button>
         <button class="gallery-item portrait reveal" type="button" data-index="4"><img src="images/el-hornero-delta-galeria-06.jpeg" alt="Fotografía de El Hornero, restaurante en el Delta de Tigre" data-i18n-alt="altGalleryPhoto" width="850" height="1100" loading="lazy" decoding="async"></button>
         <button class="gallery-item detail reveal" type="button" data-index="5"><img src="images/el-hornero-delta-galeria-07.jpeg" alt="Fotografía de El Hornero, restaurante en el Delta de Tigre" data-i18n-alt="altGalleryPhoto" width="800" height="800" loading="lazy" decoding="async"></button>
-        <button class="gallery-item extra-one reveal" type="button" data-index="6"><img src="images/el-hornero-delta-espacio-exterior.jpeg" alt="Fotografía de El Hornero, restaurante en el Delta de Tigre" data-i18n-alt="altGalleryPhoto" width="900" height="900" loading="lazy" decoding="async"></button>
-        <button class="gallery-item extra-two reveal" type="button" data-index="7"><img src="images/el-hornero-delta-galeria-08.jpeg" alt="Fotografía de El Hornero, restaurante en el Delta de Tigre" data-i18n-alt="altGalleryPhoto" width="900" height="900" loading="lazy" decoding="async"></button>
-        <button class="gallery-item extra-three reveal" type="button" data-index="8"><img src="images/el-hornero-delta-galeria-09.jpeg" alt="Fotografía de El Hornero, restaurante en el Delta de Tigre" data-i18n-alt="altGalleryPhoto" width="900" height="900" loading="lazy" decoding="async"></button>
-        <button class="gallery-item extra-four reveal" type="button" data-index="9"><img src="images/el-hornero-delta-galeria-01.jpeg" alt="Fotografía de El Hornero, restaurante en el Delta de Tigre" data-i18n-alt="altGalleryPhoto" width="900" height="900" loading="lazy" decoding="async"></button>
-        <button class="gallery-item extra-five reveal" type="button" data-index="10"><img src="images/el-hornero-delta-mesa-exterior.png" alt="Fotografía de El Hornero, restaurante en el Delta de Tigre" data-i18n-alt="altGalleryPhoto" width="1200" height="760" loading="lazy" decoding="async"></button>
-        <button class="gallery-item extra-six reveal" type="button" data-index="11"><img src="images/el-hornero-delta-galeria-03.jpeg" alt="Fotografía de El Hornero, restaurante en el Delta de Tigre" data-i18n-alt="altGalleryPhoto" width="1200" height="760" loading="lazy" decoding="async"></button>
+        <button class="gallery-item extra-three reveal" type="button" data-index="6"><img src="images/el-hornero-delta-galeria-09.jpeg" alt="Fotografía de El Hornero, restaurante en el Delta de Tigre" data-i18n-alt="altGalleryPhoto" width="900" height="900" loading="lazy" decoding="async"></button>
+        <button class="gallery-item extra-four reveal" type="button" data-index="7"><img src="images/el-hornero-delta-galeria-01.jpeg" alt="Fotografía de El Hornero, restaurante en el Delta de Tigre" data-i18n-alt="altGalleryPhoto" width="900" height="900" loading="lazy" decoding="async"></button>
+        <button class="gallery-item extra-five reveal" type="button" data-index="8"><img src="images/el-hornero-delta-mesa-exterior.png" alt="Fotografía de El Hornero, restaurante en el Delta de Tigre" data-i18n-alt="altGalleryPhoto" width="1200" height="760" loading="lazy" decoding="async"></button>
+        <button class="gallery-item extra-six reveal" type="button" data-index="9"><img src="images/el-hornero-delta-galeria-03.jpeg" alt="Fotografía de El Hornero, restaurante en el Delta de Tigre" data-i18n-alt="altGalleryPhoto" width="1200" height="760" loading="lazy" decoding="async"></button>
       </div>
     </section>
 
     <section class="menu-preview section-pad" id="carta" aria-labelledby="menu-title">
-      <div class="menu-art reveal"><img src="images/el-hornero-delta-galeria-08.jpeg" alt="Plato de la carta de El Hornero en el Delta" data-i18n-alt="altMenu" width="900" height="1050" loading="lazy" decoding="async"><span aria-hidden="true">03</span></div>
+      <div class="menu-art reveal"><img src="images/el-hornero-delta-galeria-04.jpeg" alt="Plato de la carta de El Hornero en el Delta" data-i18n-alt="altMenu" width="900" height="1050" loading="lazy" decoding="async"><span aria-hidden="true">03</span></div>
       <div class="menu-copy reveal">
         <p class="eyebrow" data-i18n="menuEyebrow">03 — La carta</p>
         <h2 id="menu-title" data-i18n="menuTitle">Comer entre verde</h2>

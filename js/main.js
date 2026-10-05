@@ -12,6 +12,7 @@
   const lightboxCaption = lightbox.querySelector(".lightbox-caption");
   const lightboxCount = lightbox.querySelector(".lightbox-count");
   const galleryImageSources = [
+    "images/el-hornero-delta-galeria-06.jpeg",
     "images/el-hornero-delta-mesa-exterior.png",
     "images/el-hornero-delta-galeria-01.jpeg",
     "images/el-hornero-delta-galeria-02.jpeg",
@@ -19,10 +20,7 @@
     "images/el-hornero-delta-galeria-03.jpeg",
     "images/el-hornero-delta-galeria-04.jpeg",
     "images/el-hornero-delta-galeria-05.jpeg",
-    "images/el-hornero-delta-galeria-06.jpeg",
     "images/el-hornero-delta-galeria-07.jpeg",
-    "images/el-hornero-delta-espacio-exterior.jpeg",
-    "images/el-hornero-delta-galeria-08.jpeg",
     "images/el-hornero-delta-galeria-09.jpeg"
   ];
   let language = getInitialLanguage();
@@ -37,6 +35,17 @@
 
   function t(key) {
     return translations[language][key] || translations.es[key] || key;
+  }
+
+  function updateWhatsAppLinks() {
+    if (!SITE_CONFIG.whatsappNumber) return;
+    const phone = SITE_CONFIG.whatsappNumber.replace(/\D/g, "");
+    const query = new URLSearchParams({ text: t("whatsappMessage") });
+    const whatsappUrl = `https://wa.me/${phone}?${query}`;
+    const whatsapp = document.querySelector(".whatsapp-button");
+    whatsapp.href = whatsappUrl;
+    whatsapp.hidden = false;
+    document.querySelectorAll("[data-whatsapp-link]").forEach((link) => { link.href = whatsappUrl; });
   }
 
   function setLanguage(nextLanguage) {
@@ -58,6 +67,7 @@
       button.classList.toggle("active", active);
       button.setAttribute("aria-pressed", String(active));
     });
+    updateWhatsAppLinks();
     try { localStorage.setItem(storageKey, language); } catch (_) { /* Translation still works without storage. */ }
     if (!lightbox.hidden) updateLightbox();
   }
@@ -86,7 +96,7 @@
 
   function randomizeGallery() {
     const shuffledSources = [...galleryImageSources];
-    for (let index = shuffledSources.length - 1; index > 0; index -= 1) {
+    for (let index = shuffledSources.length - 1; index > 1; index -= 1) {
       const randomIndex = Math.floor(Math.random() * (index + 1));
       [shuffledSources[index], shuffledSources[randomIndex]] = [shuffledSources[randomIndex], shuffledSources[index]];
     }
@@ -137,13 +147,6 @@
     if (SITE_CONFIG.instagramUrl) {
       instagramPanel.hidden = false;
       instagramPanel.querySelector("a").href = SITE_CONFIG.instagramUrl;
-    }
-    const whatsapp = document.querySelector(".whatsapp-button");
-    if (SITE_CONFIG.whatsappNumber) {
-      const whatsappUrl = `https://wa.me/${SITE_CONFIG.whatsappNumber.replace(/\D/g, "")}`;
-      whatsapp.href = whatsappUrl;
-      document.querySelectorAll("[data-whatsapp-link]").forEach((link) => { link.href = whatsappUrl; });
-      whatsapp.hidden = false;
     }
     const canonical = document.querySelector("#canonical-link");
     if (SITE_CONFIG.siteUrl) {

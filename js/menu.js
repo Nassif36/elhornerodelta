@@ -15,6 +15,15 @@
     return translations[language][key] || translations.es[key] || key;
   }
 
+  function updateWhatsAppLink() {
+    if (!SITE_CONFIG.whatsappNumber) return;
+    const phone = SITE_CONFIG.whatsappNumber.replace(/\D/g, "");
+    const query = new URLSearchParams({ text: t("whatsappMessage") });
+    const whatsapp = document.querySelector(".whatsapp-button");
+    whatsapp.href = `https://wa.me/${phone}?${query}`;
+    whatsapp.hidden = false;
+  }
+
   function localized(value) {
     if (typeof value === "string") return value;
     if (!value) return "";
@@ -72,6 +81,7 @@
       button.classList.toggle("active", active);
       button.setAttribute("aria-pressed", String(active));
     });
+    updateWhatsAppLink();
     try { localStorage.setItem(storageKey, language); } catch (_) { /* Translation still works without storage. */ }
     renderMenu();
   }
@@ -79,12 +89,6 @@
   const canonical = document.querySelector("#canonical-link");
   if (SITE_CONFIG.siteUrl) canonical.href = `${SITE_CONFIG.siteUrl.replace(/\/$/, "")}/menu.html`;
   else canonical.remove();
-
-  const whatsapp = document.querySelector(".whatsapp-button");
-  if (SITE_CONFIG.whatsappNumber) {
-    whatsapp.href = `https://wa.me/${SITE_CONFIG.whatsappNumber.replace(/\D/g, "")}`;
-    whatsapp.hidden = false;
-  }
 
   langButtons.forEach((button) => button.addEventListener("click", () => setLanguage(button.dataset.lang)));
   setLanguage(language);

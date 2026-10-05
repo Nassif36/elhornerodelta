@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 30" role="img" aria-labelledby="title">
+  <title id="title">Bandera argentina</title>
+  <path fill="#75AADB" d="M0 0h45v10H0zM0 20h45v10H0z"/>
+  <path fill="#fff" d="M0 10h45v10H0z"/>
+  <path fill="#F6B40E" d="m22.5 10.2 1.1 2.5 2.1-1.8-.9 2.7 2.7.1-2.5 1.2 1.8 2.1-2.7-.9-.1 2.7-1.2-2.5-2.1 1.8.9-2.7-2.7-.1 2.5-1.2-1.8-2.1 2.7.9z"/>
+  <circle cx="22.5" cy="15" r="1.4" fill="#F6B40E"/>
+  <path fill="none" stroke="#527c94" stroke-opacity=".25" d="M.5.5h44v29H.5z"/>
+</svg>

@@ -18,73 +18,172 @@ const SITE_CONFIG = Object.freeze({
       items: [
         {
           name: { es: "Empanadas", en: "Empanadas", pt: "Empanadas" },
-          description: { es: "Una entrada clásica para compartir.", en: "A classic starter to share.", pt: "Uma entrada clássica para compartilhar." }
+          description: {
+            es: "Jamón y queso · Pollo · Verdura · Carne cortada a cuchillo · Osobuco braseado con morrón asado y muzzarella",
+            en: "Ham and cheese · Chicken · Vegetable · Hand-cut beef · Braised osso buco with roasted pepper and mozzarella",
+            pt: "Presunto e queijo · Frango · Vegetais · Carne cortada na faca · Ossobuco braseado com pimentão assado e muçarela"
+          }
         },
         {
-          name: { es: "Provoleta", en: "Grilled provolone", pt: "Provoleta" },
-          description: { es: "Queso provolone servido caliente.", en: "Provolone cheese served hot.", pt: "Queijo provolone servido quente." }
+          name: { es: "Rabas", en: "Calamari", pt: "Lulas empanadas" }
+        },
+        { name: { es: "Provoleta", en: "Grilled provolone", pt: "Provoleta" } }
+      ]
+    },
+    {
+      name: { es: "Platos", en: "Main dishes", pt: "Pratos" },
+      items: [
+        {
+          name: { es: "Milanesa de ternera", en: "Beef milanesa", pt: "Milanesa de carne bovina" },
+          description: { es: "Con guarnición.", en: "Served with a side.", pt: "Acompanhada de guarnição." }
         },
         {
-          name: { es: "Papas fritas", en: "French fries", pt: "Batatas fritas" },
-          description: { es: "Porción para acompañar o compartir.", en: "A side to accompany or share.", pt: "Porção para acompanhar ou compartilhar." }
+          name: { es: "Milanesa de pollo", en: "Chicken milanesa", pt: "Milanesa de frango" },
+          description: { es: "Con guarnición.", en: "Served with a side.", pt: "Acompanhada de guarnição." }
+        },
+        {
+          name: { es: "Milanesa napolitana", en: "Neapolitan-style milanesa", pt: "Milanesa à napolitana" },
+          description: { es: "Con guarnición.", en: "Served with a side.", pt: "Acompanhada de guarnição." }
+        },
+        {
+          name: { es: "Tortilla de papas", en: "Spanish omelette", pt: "Tortilha de batatas" },
+          description: { es: "Con guarnición.", en: "Served with a side.", pt: "Acompanhada de guarnição." }
+        },
+        {
+          name: { es: "Bife de chorizo", en: "Sirloin steak", pt: "Bife de chorizo" },
+          description: { es: "Con guarnición.", en: "Served with a side.", pt: "Acompanhado de guarnição." }
+        },
+        {
+          name: { es: "Asado banderita", en: "Thin-cut short ribs", pt: "Costela bovina em tira fina" },
+          description: { es: "Con guarnición.", en: "Served with a side.", pt: "Acompanhado de guarnição." }
+        },
+        {
+          name: { es: "Bondiola", en: "Pork shoulder", pt: "Bondiola suína" },
+          description: { es: "Con guarnición.", en: "Served with a side.", pt: "Acompanhada de guarnição." }
         }
       ]
     },
     {
-      name: { es: "Principales", en: "Main courses", pt: "Pratos principais" },
+      name: { es: "Ensaladas", en: "Salads", pt: "Saladas" },
       items: [
         {
-          name: { es: "Milanesa con guarnición", en: "Milanesa with a side", pt: "Milanesa com acompanhamento" },
-          description: { es: "Un clásico argentino con guarnición a elección.", en: "An Argentine classic with your choice of side.", pt: "Um clássico argentino com acompanhamento à escolha." }
+          name: { es: "Caesar", en: "Caesar", pt: "Caesar" },
+          description: {
+            es: "Lechugas con pollo crocante, croutones, queso parmesano y aderezo.",
+            en: "Lettuce with crispy chicken, croutons, Parmesan cheese and dressing.",
+            pt: "Alfaces com frango crocante, croutons, queijo parmesão e molho."
+          }
         },
         {
-          name: { es: "Fideos", en: "Pasta", pt: "Massas" },
-          description: { es: "Pasta con salsa a elección.", en: "Pasta with your choice of sauce.", pt: "Massa com molho à escolha." }
+          name: { es: "Del Hornero", en: "Del Hornero", pt: "Del Hornero" },
+          description: {
+            es: "Verdes, zapallo asado, tomates asados, pickles de cebolla y queso azul.",
+            en: "Mixed greens, roasted squash, roasted tomatoes, pickled onion and blue cheese.",
+            pt: "Folhas verdes, abóbora assada, tomates assados, cebola em conserva e queijo azul."
+          }
+        },
+        {
+          name: { es: "Ensalada completa", en: "House salad", pt: "Salada completa" },
+          description: {
+            es: "Lechuga, tomate, zanahoria, cebolla y huevo.",
+            en: "Lettuce, tomato, carrot, onion and egg.",
+            pt: "Alface, tomate, cenoura, cebola e ovo."
+          }
+        }
+      ]
+    },
+    {
+      name: { es: "Pastas", en: "Pasta", pt: "Massas" },
+      items: [
+        {
+          name: { es: "Sorrentinos", en: "Sorrentinos", pt: "Sorrentinos" },
+          description: {
+            es: "Jamón y muzza · Verdura y ricota · Zapallo y muzza",
+            en: "Ham and mozzarella · Vegetables and ricotta · Squash and mozzarella",
+            pt: "Presunto e muçarela · Vegetais e ricota · Abóbora e muçarela"
+          }
         },
         {
           name: { es: "Ravioles", en: "Ravioli", pt: "Ravióli" },
-          description: { es: "Pasta rellena con salsa a elección.", en: "Filled pasta with your choice of sauce.", pt: "Massa recheada com molho à escolha." }
+          description: {
+            es: "Jamón y muzza · Verdura y ricota · Zapallo y muzza",
+            en: "Ham and mozzarella · Vegetables and ricotta · Squash and mozzarella",
+            pt: "Presunto e muçarela · Vegetais e ricota · Abóbora e muçarela"
+          }
         },
         {
-          name: { es: "Sánguche completo", en: "Loaded sandwich", pt: "Sanduíche completo" },
-          description: { es: "Preparado al momento y acompañado con papas.", en: "Made to order and served with fries.", pt: "Preparado na hora e servido com batatas." }
+          name: { es: "Ñoquis", en: "Gnocchi", pt: "Nhoque" },
+          description: { es: "Zapallo, cabutia o papa.", en: "Squash, kabocha or potato.", pt: "Abóbora, cabotiá ou batata." }
         },
         {
-          name: { es: "Hamburguesa completa", en: "Loaded burger", pt: "Hambúrguer completo" },
-          description: { es: "Hamburguesa con acompañamiento.", en: "Burger served with a side.", pt: "Hambúrguer servido com acompanhamento." }
-        },
-        {
-          name: { es: "Ensalada", en: "Salad", pt: "Salada" },
-          description: { es: "Una opción fresca y simple.", en: "A fresh and simple option.", pt: "Uma opção fresca e simples." }
+          name: { es: "Canelones", en: "Cannelloni", pt: "Canelones" },
+          description: { es: "Verdura o zapallo.", en: "Vegetables or squash.", pt: "Vegetais ou abóbora." }
         }
       ]
     },
     {
-      name: { es: "Postres", en: "Desserts", pt: "Sobremesas" },
+      name: { es: "Salsas", en: "Sauces", pt: "Molhos" },
+      items: [
+        { name: { es: "Filetto", en: "Filetto", pt: "Filetto" } },
+        { name: { es: "Bolognesa", en: "Bolognese", pt: "Bolonhesa" } },
+        { name: { es: "Crema", en: "Cream", pt: "Creme" } },
+        { name: { es: "Rosa", en: "Rosé", pt: "Rosé" } }
+      ]
+    },
+    {
+      name: { es: "Pizzas", en: "Pizzas", pt: "Pizzas" },
+      items: [
+        { name: { es: "Muzzarella", en: "Mozzarella", pt: "Muçarela" } },
+        { name: { es: "Napolitana", en: "Neapolitan", pt: "À napolitana" } },
+        { name: { es: "Jamón y morrón", en: "Ham and roasted pepper", pt: "Presunto e pimentão" } },
+        { name: { es: "Rúcula y parmesano", en: "Rocket and Parmesan", pt: "Rúcula e parmesão" } }
+      ]
+    },
+    {
+      name: { es: "Sándwiches (con fritas)", en: "Sandwiches (with fries)", pt: "Sanduíches (com fritas)" },
       items: [
         {
-          name: { es: "Flan con dulce de leche", en: "Flan with dulce de leche", pt: "Pudim com doce de leite" },
-          description: { es: "Flan clásico con dulce de leche.", en: "Classic flan with dulce de leche.", pt: "Pudim clássico com doce de leite." }
+          name: { es: "Lomo", en: "Beef tenderloin sandwich", pt: "Sanduíche de filé" },
+          description: {
+            es: "Simple · Con lechuga y tomate · Con jamón y queso · Completo",
+            en: "Plain · With lettuce and tomato · With ham and cheese · Fully loaded",
+            pt: "Simples · Com alface e tomate · Com presunto e queijo · Completo"
+          }
         },
         {
-          name: { es: "Panqueque con dulce de leche", en: "Dulce de leche pancake", pt: "Panqueca com doce de leite" },
-          description: { es: "Panqueque tibio relleno de dulce de leche.", en: "Warm pancake filled with dulce de leche.", pt: "Panqueca quente recheada com doce de leite." }
+          name: { es: "Bondiola", en: "Pork shoulder sandwich", pt: "Sanduíche de bondiola" },
+          description: {
+            es: "Simple · Con lechuga y tomate · Con jamón y queso · Completo",
+            en: "Plain · With lettuce and tomato · With ham and cheese · Fully loaded",
+            pt: "Simples · Com alface e tomate · Com presunto e queijo · Completo"
+          }
         },
         {
-          name: { es: "Helado", en: "Ice cream", pt: "Sorvete" },
-          description: { es: "Selección de sabores.", en: "A selection of flavours.", pt: "Seleção de sabores." }
+          name: { es: "Hamburguesas", en: "Burgers", pt: "Hambúrgueres" },
+          description: {
+            es: "Simple · Completa (jamón, queso, lechuga y tomate) · Cheddar, panceta, cebolla caramelizada y barbacoa.",
+            en: "Plain · Fully loaded (ham, cheese, lettuce and tomato) · Cheddar, bacon, caramelized onion and barbecue sauce.",
+            pt: "Simples · Completa (presunto, queijo, alface e tomate) · Cheddar, bacon, cebola caramelizada e molho barbecue."
+          }
         }
       ]
     },
     {
-      name: { es: "Bebidas", en: "Drinks", pt: "Bebidas" },
+      name: { es: "Pesca del día", en: "Catch of the day", pt: "Pesca do dia" },
       items: [
-        { name: { es: "Agua", en: "Water", pt: "Água" } },
-        { name: { es: "Gaseosa", en: "Soft drink", pt: "Refrigerante" } },
-        { name: { es: "Limonada", en: "Lemonade", pt: "Limonada" } },
-        { name: { es: "Cerveza", en: "Beer", pt: "Cerveja" } },
-        { name: { es: "Vino", en: "Wine", pt: "Vinho" } },
-        { name: { es: "Café", en: "Coffee", pt: "Café" } }
+        {
+          name: { es: "Pacú grillado", en: "Grilled pacu", pt: "Pacu grelhado" },
+          description: { es: "Con limón y zapallo asado.", en: "With lemon and roasted squash.", pt: "Com limão e abóbora assada." }
+        }
+      ]
+    },
+    {
+      name: { es: "Meriendas", en: "Afternoon treats", pt: "Lanches da tarde" },
+      items: [
+        { name: { es: "Tostado de jamón y queso", en: "Toasted ham and cheese sandwich", pt: "Misto quente de presunto e queijo" } },
+        { name: { es: "Medialunas", en: "Argentine croissants", pt: "Medialunas argentinas" } },
+        { name: { es: "Café expreso / con leche", en: "Espresso / coffee with milk", pt: "Café espresso / com leite" } },
+        { name: { es: "Chocolatada", en: "Chocolate milk", pt: "Leite com chocolate" } }
       ]
     }
   ]
